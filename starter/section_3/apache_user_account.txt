@@ -3,5 +3,22 @@
 
 #Configuration lines:
 
+# create new user
+useradd apache-user
+passwd apache-user
+
+# create new group
+groupadd apache-group
+
+# assign new user to newly create group
+usermod -g apache-group apache-user
+
+# update configuration with newly created user and group 
+vi /etc/apache2/envvars
+export APACHE_RUN_USER=apache-user
+export APACHE_RUN_GROUP=apache-group
+
+# restart apache2 service
+sudo service apache2 restart
 
 

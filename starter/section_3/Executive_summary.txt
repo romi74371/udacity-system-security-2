@@ -1,0 +1,13 @@
+Executive summary: Responding to a Nation-State Cyber Attack
+The National Peace Agency of North Udan launched an attack during a national holiday in South Udan. They have managed to compromise a linux server which serves as a jump host to connect the Tridanium processing plant to the internet.
+An alarm was triggered after brute force attack of an employee account.
+
+1. Detection
+Antivirus scan has reveal three infected files in the system. One additional suspicious file has been identified which was not revealed by antivirus scan. To prevent suspicious file from being detected by anitvirus scan in the future the yara rules has been created.
+
+2. Mitigation
+Attackers IP address has been identified. To prevent SSH connection requests from this host the suspicious IP address has been block in the system settings.
+The attacker has created backdoor user and use it to get the root access to the system, that is why the SSH root access has been disabled
+
+3. Hardening
+Vulnerabili scan has been performed on the system. The patching of the apache web server has been done to make it difficult for an attacker to perform reconnaissance on the server and launch attacks. Final hardening has been performed by de-privileging apache account to ensure lease priviledge policy. 

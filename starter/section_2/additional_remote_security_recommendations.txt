@@ -1,0 +1,6 @@
+Configuring SSH to Improve Security
+1. disable root login
+2. define a list of permited users
+3. change the default port of the ssh service
+4. configure ssh keys for login instead of passwords
+5. use multi-factor authentication (MFA)
